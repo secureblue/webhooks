@@ -17,6 +17,7 @@ on:
 jobs:
   rebuild-brew-proxy:
     environment: Build
+    runs-on: ubuntu-slim
     uses: ./.github/workflows/rebuild-generic.yml
     secrets:
       copr_webhook: ${{ secrets.COPR_WEBHOOK_BREW_PROXY }}

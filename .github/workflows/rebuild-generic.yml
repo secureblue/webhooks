@@ -20,7 +20,6 @@ on:
 jobs:
   webhook:
     name: Ping copr webhook
-    runs-on: ubuntu-slim
     permissions: {}
     steps:
       - name: Use curl to ping webhook
