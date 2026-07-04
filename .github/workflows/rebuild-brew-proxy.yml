@@ -19,3 +19,4 @@ jobs:
     uses: ./.github/workflows/rebuild-generic.yml
     with:
       environment: "brew-proxy"
+    secrets: inherit
