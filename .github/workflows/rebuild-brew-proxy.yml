@@ -16,6 +16,7 @@ on:
   workflow_dispatch:
 jobs:
   rebuild-brew-proxy:
+    environment: Build
     uses: ./.github/workflows/rebuild-generic.yml
     secrets:
       copr_webhook: ${{ secrets.COPR_WEBHOOK_BREW_PROXY }}
