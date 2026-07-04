@@ -14,14 +14,16 @@ name: Rebuild
 permissions: {}
 on:
   workflow_call:
-    secrets:
-      COPR_WEBHOOK:
+    inputs:
+      environment:
         required: true
+        type: string
 jobs:
   webhook:
     name: Ping copr webhook
     permissions: {}
     runs-on: ubuntu-slim
+    environment: ${{ inputs.environment }}
     steps:
       - name: Use curl to ping webhook
         shell: bash
