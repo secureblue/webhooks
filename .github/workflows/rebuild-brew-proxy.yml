@@ -16,7 +16,7 @@ on:
   workflow_dispatch:
 jobs:
   rebuild-brew-proxy:
-    uses: ./.github/workflows/rebuild-generic.yml
+    uses: $/.github/workflows/rebuild-generic.yml
     with:
       environment: "brew-proxy"
     secrets: inherit

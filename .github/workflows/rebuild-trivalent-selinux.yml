@@ -1,0 +1,14 @@
+# SPDX-FileCopyrightText: Copyright 2026 The Secureblue Authors
+#
+# SPDX-License-Identifier: Apache-2.0
+
+name: Build trivalent-selinux
+permissions: {}
+on:
+  workflow_dispatch:
+jobs:
+  rebuild-run0edit:
+    uses: $/.github/workflows/rebuild-generic.yml
+    with:
+      environment: "trivalent-selinux"
+    secrets: inherit
